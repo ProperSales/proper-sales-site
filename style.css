@@ -14,17 +14,13 @@ body {
   text-transform: uppercase;
 }
 
-/* Sticky Nav */
+/* Nav overlaying hero */
 .nav {
-  position: sticky;
+  position: absolute;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 2;
   background: transparent;
-}
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -59,25 +55,25 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 1;
 }
 .logo-container {
   opacity: 0;
   animation: fadeIn 0.5s ease-out forwards;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: center;
   width: 100%;
 }
 .hero-logo {
-  max-width: 70%;
+  max-width: 50%;
   width: auto;
 }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 /* Section Spacing */
 .section { padding: 8rem 1rem; }
-section h2, section p { text-align: center; margin-bottom: 1rem; }
+.section h2, .section p, .contact h2, .contact p, .team-member { text-align: center; }
 
 /* About */
 .about p { max-width: 600px; margin: 0 auto; }
@@ -120,19 +116,9 @@ section h2, section p { text-align: center; margin-bottom: 1rem; }
 .price { font-size: 2rem; font-weight: 700; margin-top: 1rem; }
 
 /* Team */
-.team-grid {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-}
+.team-grid { display: flex; justify-content: center; gap: 4rem; }
 .team-member { max-width: 200px; }
-.placeholder-circle {
-  background: #ddd;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 0 auto;
-}
+.placeholder-circle { background: #ddd; width: 200px; height: 200px; border-radius: 50%; margin: 0 auto; }
 .team-member h4 { margin-top: 1rem; font-size: 1.1rem; }
 .team-member h5 { font-size: 0.9rem; margin: 0.5rem 0; }
 .team-member p { font-size: 0.8rem; }
@@ -143,13 +129,4 @@ section h2, section p { text-align: center; margin-bottom: 1rem; }
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
-}
-
-/* Additional Centering */
-.section h2,
-.section p,
-.contact h2,
-.contact p,
-.team-member {
-  text-align: center;
 }
