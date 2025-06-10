@@ -11,75 +11,127 @@ body {
   color: var(--text-color);
   background: var(--background);
   line-height: 1.6;
+  text-transform: uppercase;
 }
 
 /* Sticky Nav */
 .nav {
-  position: sticky; top: 0; width: 100%; z-index: 100;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   background: rgba(255,255,255,0.85);
   backdrop-filter: blur(8px);
 }
 .nav-container {
-  max-width: 1200px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: flex-end;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
-.nav-links { list-style: none; display: flex; gap: 2rem; text-transform: uppercase; }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
+}
 .nav-links a {
-  text-decoration: none; color: var(--text-color);
-  font-weight: 700; font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 0.9rem;
   transition: color 0.3s;
 }
 .nav-links a:hover { color: var(--accent); }
-.menu-toggle { display: none; cursor: pointer; }
+
+/* Section Spacing */
+.section { padding: 6rem 1rem; }
 
 /* Hero (Full-screen logo) */
-.hero { height: 100vh; display: flex; align-items: center; justify-content: center; }
-.logo-container { opacity: 0; animation: fadeIn 0.5s ease-out forwards; }
-.hero-logo { max-width: 60%; width: auto; }
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-container {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+.hero-logo {
+  max-width: 60%;
+  width: auto;
+}
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-.section { padding: 4rem 1rem; }
-h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; text-transform: uppercase; }
+/* Centered Headings & Text */
+.section h2, .section p, .team-member h4, .team-member h5, .team-member p {
+  text-align: center;
+}
 
 /* About */
-.about .container { display: flex; align-items: center; gap: 2rem; max-width: 1200px; margin: 0 auto; }
-.about-images { display: flex; gap: 2rem; }
-.placeholder-circle { background: #ddd; width: 200px; height: 200px; border-radius: 50%; }
-.about-content { flex: 1; }
-.about-content p { max-width: 600px; }
+.about p {
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
 
 /* Services */
 .services-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 2rem; max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.card { background: #fff; padding: 2rem; border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
   transition: transform 0.3s;
 }
 .card:hover { transform: translateY(-10px); border-top: 4px solid var(--accent); }
-.icon-placeholder { border: 2px solid #ddd; width: 50px; height: 50px; margin: 0 auto 1rem; border-radius: 50%; }
+.icon-placeholder {
+  border: 2px solid #ddd;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+}
 
 /* Pricing */
 .pricing-single { display: flex; justify-content: center; }
-.pricing-card { background: #fff; padding: 2rem; border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;
+.pricing-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
 }
 .pricing-card.popular { border: 2px solid var(--accent); }
 .price { font-size: 2rem; font-weight: 700; margin-top: 1rem; }
 
 /* Team */
-.team-grid { display: flex; justify-content: center; gap: 4rem; }
-.team-member { text-align: center; }
-.team-member h4 { margin-top: 1rem; text-transform: uppercase; }
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.team-member {
+  max-width: 200px;
+}
+.placeholder-circle {
+  background: #ddd;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.team-member h4 { margin-top: 1rem; font-size: 1.1rem; }
+.team-member h5 { font-size: 0.9rem; margin: 0.5rem 0; }
+.team-member p { font-size: 0.8rem; }
 
 /* Contact */
-.contact { text-align: center; }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about .container, .team-grid { flex-direction: column; align-items: center; }
-  .nav-links { display: none; }
-  .menu-toggle { display: block; }
-}
+.contact p { max-width: 400px; margin: 1rem auto 0; }
