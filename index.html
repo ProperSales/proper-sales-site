@@ -14,18 +14,23 @@
   <header class="nav">
     <div class="nav-container">
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- Hero Section (Fullscreen Logo) -->
+  <!-- Hero Section with Background Video -->
   <header class="hero" id="home">
+    <video id="hero-video" autoplay muted loop playsinline>
+      <source src="hero.mp4" type="video/mp4" />
+      <!-- Fallback image -->
+      <img src="PROPER_SALES.png" alt="Proper Sales Logo" />
+    </video>
     <div class="logo-container">
       <img src="PROPER_SALES.png" alt="Proper Sales Logo" class="hero-logo" />
     </div>
@@ -71,7 +76,7 @@
     </div>
   </section>
 
-  <!-- Meet The Team -->
+  <!-- Meet The Team (Bios) -->
   <section id="team" class="section team">
     <div class="team-grid">
       <div class="team-member">
