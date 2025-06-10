@@ -145,3 +145,11 @@ section h2, section p { text-align: center; margin-bottom: 1rem; }
   .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
 }
 
+/* Additional Centering */
+.section h2,
+.section p,
+.contact h2,
+.contact p,
+.team-member {
+  text-align: center;
+}
