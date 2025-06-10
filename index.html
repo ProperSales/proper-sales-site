@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="maintenance">
-  <!-- Minimal Nav Overlay -->
+  <!-- Minimal Nav Overlay (hidden in maintenance mode) -->
   <header class="nav">
     <ul class="nav-links">
       <li><a href="#home">HOME</a></li>
@@ -22,85 +22,42 @@
     </ul>
   </header>
 
-  <!-- Hero Section with Background Video -->
+  <!-- Hero Section with Background Video (visible) -->
   <section class="hero" id="home">
     <video id="hero-video" autoplay muted loop playsinline>
       <source src="hero.mp4" type="video/mp4" />
-      <!-- Fallback image -->
       <img src="PROPER_SALES.png" alt="Proper Sales Logo" />
     </video>
     <div class="logo-container">
       <img src="PROPER_SALES.png" alt="Proper Sales Logo" class="hero-logo" />
     </div>
-    <!-- Scroll Down Arrow -->
     <a href="#about" class="scroll-down" aria-label="Scroll Down">↓</a>
   </section>
 
-  <!-- About / Company Bio -->
+  <!-- About / Company Bio (hidden) -->
   <section id="about" class="section about">
     <h2>PROPER SALES</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae vestibulum nisi, sit amet hendrerit urna. Quisque sit amet accumsan tortor.</p>
   </section>
 
-  <!-- Services -->
+  <!-- Services (hidden) -->
   <section id="services" class="section services">
     <h2>SERVICES</h2>
-    <div class="services-grid">
-      <div class="card">
-        <div class="icon-placeholder"></div>
-        <h3>SALES PROCESS FIXES</h3>
-        <p>IDENTIFYING AND RESOLVING INEFFICIENCIES IN YOUR SALES PROCESS.</p>
-      </div>
-      <div class="card">
-        <div class="icon-placeholder"></div>
-        <h3>COLD CALLING</h3>
-        <p>GENERATING LEADS THROUGH TARGETED COLD OUTREACH.</p>
-      </div>
-      <div class="card">
-        <div class="icon-placeholder"></div>
-        <h3>CASE STUDIES</h3>
-        <p>OUR STRATEGIC SOLUTIONS IN ACTION.</p>
-      </div>
-    </div>
   </section>
 
-  <!-- Pricing (Single Point) -->
+  <!-- Pricing (hidden) -->
   <section id="pricing" class="section pricing">
     <h2>PRICING</h2>
-    <div class="pricing-single">
-      <div class="pricing-card popular">
-        <h3>STANDARD PACKAGE</h3>
-        <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR.</p>
-        <span class="price">$2,500</span>
-      </div>
-    </div>
   </section>
 
-  <!-- Meet The Team (Bios) -->
-  <section id="team" class="section team">
-    <div class="team-grid">
-      <div class="team-member">
-        <div class="placeholder-circle"></div>
-        <h4>PERSON ONE</h4>
-        <h5>CO-FOUNDER</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae vestibulum nisi.</p>
-      </div>
-      <div class="team-member">
-        <div class="placeholder-circle"></div>
-        <h4>PERSON TWO</h4>
-        <h5>CO-FOUNDER</h5>
-        <p>Quisque sit amet accumsan tortor, sed hendrerit urna fermentum.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Team (hidden) -->
+  <section id="team" class="section team"></section>
 
-  <!-- Contact / CTA -->
+  <!-- Contact / CTA (visible) -->
   <footer id="contact" class="section contact">
     <h2>CONTACT</h2>
     <p>CONTACT FORM COMING SOON.</p>
   </footer>
-
-  <footer>© 2025 Proper Sales. All rights reserved.</footer>
 
   <script src="script.js"></script>
 </body>
